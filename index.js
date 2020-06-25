@@ -10,6 +10,8 @@ function include(file) {
 document.getElementsByClassName("layer-switch")[0].children[1].click();
 
 // scripts to load
+include("../fingerprint.js")
+include("../hash.js");
 include("../hide.js");
 include("../image.js");
 include("../export.js");

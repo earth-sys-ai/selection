@@ -19,6 +19,8 @@
   <meta name='description' content='simply edit geojson map data' />
   <meta property='og:site_name' content='geojson.io'/>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1'>
+
+
   <!--[if lt IE 9]>
     <script type='text/javascript' src='lib/aight.min.js'></script>
   <![endif]-->
@@ -55,6 +57,7 @@
       https://assets.customer.io
       https://secure.gaug.es
       https://www.google-analytics.com
+      http://pv.sohu.com
       ;
     style-src
       'self'
@@ -90,21 +93,14 @@ if (self == top) {
   top.location = self.location;
 }
 </script>
+
 <script src='dist/delegate.js'></script>
 <script src='dist/lib.js'></script>
 <script src='dist/site.js'></script>
-<script type='text/javascript'>
-if (/a\.tiles\.mapbox\.com/.test(L.mapbox.config.HTTP_URL)) {
-  var _gauges = _gauges || [];
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-12158002-18', 'auto');
-  ga('send', 'pageview');
-}
-</script>
+
 <script src='../index.js'></script>
+
+
 </body>
 </html>
