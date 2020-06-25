@@ -1,6 +1,6 @@
 var map = window.api.map;
-map.panTo(new L.latLng(28.40, -96.69));
-map.setZoom(7);
+map.panTo(new L.latLng(29.8, -94.8));
+map.setZoom(9);
 
 // tile ids from config
 var tile_ids = [];
