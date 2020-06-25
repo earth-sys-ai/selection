@@ -14,4 +14,4 @@ Open url
 ---
 
 ## **Config**
-Variables for an image source and a server url to record polygons to may be edited in `config.json`.
+Variables for NOAA CDN tile ids and a server url to record polygons to may be edited in `config.json`.
