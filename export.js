@@ -5,10 +5,12 @@ function export_map() {
         return null;
 
     // unique identifier
-    Fingerprint2.get(function (fp) {
-        var SHA = new Hashes.SHA256
-        let hash = SHA.hex(JSON.stringify(fp));
+    Fingerprint2.get(function (components) {
+        let values = components.map(function (component) { return component.value })
+        let hash = Fingerprint2.x64hash128(values.join(''), 31)
         geojson.uid = hash;
+        console.log(geojson.uid);
+
 
         // get url to export to
         var export_url = '';
@@ -28,6 +30,14 @@ function export_map() {
         xmlhttp.send();
 
     });
+}
+
+
+// for uid compression
+function hexToBase64(hexstring) {
+    return btoa(hexstring.match(/\w{2}/g).map(function(a) {
+        return String.fromCharCode(parseInt(a, 16));
+    }).join(""));
 }
 
 // export on window unload
