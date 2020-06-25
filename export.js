@@ -31,4 +31,4 @@ function export_map() {
 }
 
 // export on window unload
-window.addEventListener("unload", export_map);
+window.addEventListener("beforeunload", export_map);
