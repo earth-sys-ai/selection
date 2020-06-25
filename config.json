@@ -1,4 +1,4 @@
 {
-    "image_source": "data/",
+    "image_source": "images/",
     "export_url": "http://0.0.0.0:8001/" 
 }

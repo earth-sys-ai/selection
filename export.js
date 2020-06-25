@@ -28,7 +28,6 @@ function export_map() {
         };
         xmlhttp.open("GET","../config.json",true);
         xmlhttp.send();
-
     });
 }
 
