@@ -18,4 +18,17 @@ Open url
 ---
 
 ## **Config**
-Variables for NOAA CDN tile ids and a server url to record polygons to may be edited in `config.json`.
+[config.json](config.json)
+```c
+{
+    "zoom_level": int,    // starting zoom level
+    "focus": {
+        "lat": int,       // starting focus lat
+        "lng": int        // starting focus lng
+    }, 
+    "tile_ids": [         // noaa tile ids
+        string
+    ],
+    "export_url": string  // polygon export server
+}
+```

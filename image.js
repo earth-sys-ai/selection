@@ -18,7 +18,7 @@ xmlhttp.onreadystatechange = function(){
         });     
       
         // init pos
-        map.panTo(json.center);
+        map.panTo(json.focus);
         map.setZoom(json.zoom_level);
 
         // ocean overlay 
