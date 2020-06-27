@@ -26,7 +26,7 @@ Open url
         "lat": int,       // starting focus lat
         "lng": int        // starting focus lng
     }, 
-    "tile_ids": [         // noaa tile ids
+    "tile_ids": [         // NOAA tile ids
         string
     ],
     "export_url": string  // polygon export server
