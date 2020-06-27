@@ -34,7 +34,7 @@ function checkVariable() {
         water: {	
             fill: true,
             weight: 0,
-            fillColor: '#6bbcdb',
+            fillColor: '#081424',
             fillOpacity: 1,
         },
     };
@@ -46,20 +46,11 @@ function checkVariable() {
         subdomains: '0123',
         maxNativeZoom: 14
     });
+    map.addLayer(ocean_layer);
 
-    // toggle ocean visibility
-    L.easyButton('fa-globe', function(btn, map){
-        if (map.hasLayer(ocean_layer)) {
-            map.removeLayer(ocean_layer);
-        }
-        else {
-            map.addLayer(ocean_layer);
-        }
-    }).addTo(map);
-
-    // opacity slider
-    var slider = L.control.range({
-        position: 'topleft',
+    // tile slider
+    var tile_slider = L.control.range({
+        position: 'topright',
         min: 0,
         max: 1,
         value: 1,
@@ -67,10 +58,25 @@ function checkVariable() {
         orient: 'vertical',
         icon: false
     });
-    slider.on('input change', function(e) {
+    tile_slider.on('input change', function(e) {
         tile_layers.forEach(function (layer) {
             layer.setOpacity(e.value);
         });
     });
-    map.addControl(slider);
+    map.addControl(tile_slider);
+    
+    // ocean slider
+    var ocean_slider = L.control.range({
+        position: 'topright',
+        min: 0,
+        max: 1,
+        value: 1,
+        step: 0.05,
+        orient: 'vertical',
+        icon: false
+    });
+    ocean_slider.on('input change', function(e) {
+        ocean_layer.setOpacity(e.value);
+    });
+    map.addControl(ocean_slider);
 }
