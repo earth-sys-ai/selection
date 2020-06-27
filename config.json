@@ -1,6 +1,6 @@
 {
     "zoom_level": 10,
-    "center": {
+    "focus": {
         "lat": 29.8,
         "lng": -94.8
     }, 
