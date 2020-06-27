@@ -2,7 +2,7 @@
 function export_map() {
     let geojson = window.api.data.get('map');
     if (geojson.features.length == 0)
-        return null;
+        return;
 
     // unique identifier
     Fingerprint2.get(function (components) {
@@ -10,7 +10,6 @@ function export_map() {
         let hash = Fingerprint2.x64hash128(values.join(''), 31)
         geojson.uid = hash;
         console.log(geojson.uid);
-
 
         // get url to export to
         var export_url = '';

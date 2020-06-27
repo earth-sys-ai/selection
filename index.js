@@ -6,12 +6,13 @@ function include(file) {
     document.getElementsByTagName('head').item(0).appendChild(script); 
 } 
 
-// set map type
+// 0: Mapbox 1: Satellite 2: OSM                            v
 document.getElementsByClassName("layer-switch")[0].children[1].click();
 
 // scripts to load
+include("../button.js");
+include("../grid.js");
 include("../fingerprint.js")
-include("../hash.js");
 include("../hide.js");
 include("../image.js");
 include("../export.js");
