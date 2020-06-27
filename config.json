@@ -1,4 +1,9 @@
 {
+    "zoom_level": 10,
+    "center": {
+        "lat": 29.8,
+        "lng": -94.8
+    }, 
     "tile_ids": [
         "20170827-rgb",
         "20170828a-rgb",

@@ -1,6 +1,4 @@
 var map = window.api.map;
-map.panTo(new L.latLng(29.8, -94.8));
-map.setZoom(9);
 
 // tile ids from config
 var tile_ids = [];
@@ -8,16 +6,21 @@ var tile_layers = [];
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function(){
     if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
-        tile_ids = JSON.parse(xmlhttp.responseText).tile_ids;
+        var json = JSON.parse(xmlhttp.responseText);
+        tile_ids = json.tile_ids
 
         // add all tiles to map
-        tile_ids.forEach(function (tile) {
+        json.tile_ids.forEach(function (tile) {
             var layer = L.tileLayer('https://stormscdn.ngs.noaa.gov/' + tile + '/{z}/{x}/{y}');
             layer.zIndex = -60;
             tile_layers.push(layer);
             map.addLayer(layer);
         });     
-        
+      
+        // init pos
+        map.panTo(json.center);
+        map.setZoom(json.zoom_level);
+
         // ocean overlay 
         setTimeout(checkVariable, 500);
     }
