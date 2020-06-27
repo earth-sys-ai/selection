@@ -30,7 +30,6 @@ function export_map() {
     });
 }
 
-
 // for uid compression
 function hexToBase64(hexstring) {
     return btoa(hexstring.match(/\w{2}/g).map(function(a) {

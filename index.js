@@ -11,6 +11,7 @@ document.getElementsByClassName("layer-switch")[0].children[1].click();
 
 // scripts to load
 include("../button.js");
+include("../range.js");
 include("../grid.js");
 include("../fingerprint.js")
 include("../hide.js");
