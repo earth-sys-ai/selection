@@ -19,7 +19,7 @@ xmlhttp.onreadystatechange = function(){
         });     
         
         // ocean overlay 
-        setTimeout(checkVariable, 100);
+        setTimeout(checkVariable, 500);
     }
 };
 xmlhttp.open("GET","../config.json",true);
