@@ -10,9 +10,9 @@ function include(file) {
 document.getElementsByClassName("layer-switch")[0].children[1].click();
 
 // scripts to load
-include("../range.js");
-include("../grid.js");
-include("../fingerprint.js")
-include("../hide.js");
-include("../image.js");
-include("../export.js");
+include("mod/range.js");
+include("mod/grid.js");
+include("mod/fingerprint.js")
+include("mod/hide.js");
+include("mod/image.js");
+include("mod/export.js");

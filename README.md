@@ -18,7 +18,7 @@ Open url
 ---
 
 ## **Config**
-[config.json](web/config.json)
+[config.json](web/mod/config.json)
 ```c
 {
     "zoom_level": int,    // starting zoom level
