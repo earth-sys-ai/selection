@@ -7,13 +7,13 @@
 ## **Usage**
 
 Install dependencies  
-`cd map; npm install`
+`cd web; npm install`
 
 Start webserver   
-`python3 -m http.server -d selection`
+`python3 -m http.server -d web`
 
 Open url  
-`$BROWSER 0.0.0.0:8000/map`
+`$BROWSER 0.0.0.0:8000`
 
 ---
 
