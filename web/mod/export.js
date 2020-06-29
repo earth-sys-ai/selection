@@ -25,7 +25,7 @@ function export_map() {
                 xhr.send(JSON.stringify(geojson));
             }
         };
-        xmlhttp.open("GET","../config.json",true);
+        xmlhttp.open("GET","mod/config.json",true);
         xmlhttp.send();
     });
 }

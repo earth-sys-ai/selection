@@ -25,7 +25,7 @@ xmlhttp.onreadystatechange = function(){
         setTimeout(checkVariable, 500);
     }
 };
-xmlhttp.open("GET","../config.json",true);
+xmlhttp.open("GET","mod/config.json",true);
 xmlhttp.send();
 
 // wait for lib load
